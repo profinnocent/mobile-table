@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table{
+    /* width:100%; */
+    border: 1px solid ;
+    border-collapse: collapse;
+    /* overflow-x: auto; */
+}
+
+thead{
+    background-color: aqua;
+}
+
+td{
+    padding: 5px 15px;
+    border: 1px solid ;
+}
+
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+
+@media screen and (max-width:450px){
+    /* table{
+        width: 100%;
+    } */
+    thead{
+        display: none;
+    }
+
+    td{
+        display: block;
+        text-align: end;
+    }
+
+    td::before{
+        float: left;
+        margin-right: 50px;
+    }
+
+    td:nth-child(1)::before{
+        content: 'SN';
+    }
+    td:nth-child(2)::before{
+        content: 'Name';
+    }
+    td:nth-child(3)::before{
+        content: 'Age';
+    }
+    td:nth-child(4)::before{
+        content: 'Gender';
+    }
+} 
+
+@media screen and (max-width:450px){
+    td::before{
+        margin-right: 25px;
+    }
+}
